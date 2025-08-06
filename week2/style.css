@@ -1,0 +1,26 @@
+* {
+  color: pink;
+}
+
+h1 {
+  color: blue;
+  font-weight: bold;
+  font-size: 32px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h2 {
+  color: greenyellow;
+}
+
+p {
+  font-weight: bold;
+}
+
+section {
+  border: 2px solid red;
+  border-radius: 8px; /* coins arrondis */
+  padding: 10px;
+}
