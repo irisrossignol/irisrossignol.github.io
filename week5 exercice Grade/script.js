@@ -1,24 +1,19 @@
-function checkWeather() {
+function checkGrade() {
   const body = document.querySelector("body");
   const garde1 = document.querySelector("#myGrade1");
   const garde2 = document.querySelector("#myGrade2");
-  console.log(temp);
-  const t = temp.value;
-  console.log(t);
-  if (t > 40) {
-    console.log("It's super hot");
-    body.style.backgroundColor = "red";
-  } else if (t <= 40 && t > 30) {
-    console.log("It's sunny and warm");
-    body.style.backgroundColor = "pink";
-  } else if (t <= 30 && t > 18) {
-    console.log("It's quite pleasant");
-    body.style.backgroundColor = "green";
-  } else if (t <= 18 && t > 8) {
-    console.log("It's quite cold");
+
+  let score = Number(myGrade1.value) + Number(myGrade2.value);
+  console.log(score);
+  if (score == 60) {
+    console.log("hey you got HD");
+    console.log("time for a celebration");
     body.style.backgroundColor = "blue";
-  } else if (t <= 8) {
-    console.log("It's freezing");
-    body.style.backgroundColor = "grey";
+  } else if (score <= 59 && score > 15) {
+    console.log("hey you passed");
+    body.style.backgroundColor = "green";
+  } else if (score < 15) {
+    console.log("sorry you failed");
+    body.style.backgroundColor = "red";
   }
 }
