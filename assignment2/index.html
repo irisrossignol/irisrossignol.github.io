@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- add the font family of your choice -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <!-- Navigation Section -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Playlists</a></li>
+          <!-- Add or remove navigation items as needed -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+      <!-- Media Player Section -->
+      <a href="info.html"><button class="infoBtn">Info</button></a>
+      <div class="media-player">
+        <video id="custom-video-player">
+          <source
+            src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="custom-controls">
+          <button id="play-pause-btn" onclick="togglePlayPause()">
+            <img
+              id="play-pause-img"
+              src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+              alt="Play Button"
+              width="24"
+              height="24"
+            />
+          </button>
+          <button id="mute-btn">
+            <img
+              id="mute-img"
+              src="https://img.icons8.com/ios-glyphs/30/mute.png"
+              alt="Mute Button"
+              width="24"
+              height="24"
+            />
+          </button>
+
+          <!-- add the missing buttons or functionality here -->
+          <div class="progress-bar">
+            <span id="progress-bar-fill"></span>
+          </div>
+        </div>
+        <button id="fullscreen-btn">
+          <img
+            id="fullscreen-img"
+            src="https://img.icons8.com/ios-glyphs/30/full-screen--v1.png"
+            alt="Fullscreen Button"
+          />
+        </button>
+      </div>
+
+      <!-- Additional Content Section -->
+      <section class="videoDescription">
+        <h1>Handheld Windmill Tutorial</h1>
+        <p class="quote">
+          “Crafting is a way to make something out of nothing.”
+        </p>
+        <div class="jump-buttons">
+          <p class="titre">STEPS :</p>
+          <div class="steps">
+            <button class="step-btn" data-time="30">1</button>
+            <button class="step-btn" data-time="71">2</button>
+            <button class="step-btn" data-time="125">3</button>
+            <button class="step-btn" data-time="169">4</button>
+            <button class="step-btn" data-time="205">5</button>
+          </div>
+        </div>
+
+        <p class="titre">What you need :</p>
+        <p>
+          - sheets of foam <br />- pair of scissors <br />- glue dots <br />-
+          ruler <br />- pen <br />-paper straw
+        </p>
+        <!-- Add more content as needed -->
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+      <a href="https://icons8.com">Icons8</a>
+    </footer>
+  </body>
+</html>
