@@ -2,6 +2,12 @@ const video = document.querySelector("#custom-video-player");
 const playPauseBtn = document.querySelector("#play-pause-btn");
 const playPauseImg = document.querySelector("#play-pause-img");
 const progressBar = document.querySelector("#progress-bar-fill");
+const muteBtn = document.querySelector("#mute-btn");
+const muteImg = document.querySelector("#mute-img");
+const fullscreenBtn = document.querySelector("#fullscreen-btn");
+const fullscreenImg = document.querySelector("#fullscreen-img");
+const jumpButtons = document.querySelectorAll(".jump-buttons button");
+const stepButtons = document.querySelectorAll(".step-btn");
 
 video.removeAttribute("controls");
 // playPauseBtn.addEventListener("click", togglePlayPause);
@@ -32,9 +38,6 @@ progressBar.parentElement.addEventListener("click", (e) => {
   video.currentTime = newTime;
 });
 
-const muteBtn = document.querySelector("#mute-btn");
-const muteImg = document.querySelector("#mute-img");
-
 muteBtn.addEventListener("click", () => {
   video.muted = !video.muted;
   if (video.muted) {
@@ -45,9 +48,6 @@ muteBtn.addEventListener("click", () => {
 });
 
 muteImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v1.png";
-
-const fullscreenBtn = document.querySelector("#fullscreen-btn");
-const fullscreenImg = document.querySelector("#fullscreen-img");
 
 fullscreenBtn.addEventListener("click", () => {
   if (!document.fullscreenElement) {
@@ -71,7 +71,6 @@ video.addEventListener("dblclick", () => {
   }
 });
 
-const jumpButtons = document.querySelectorAll(".jump-buttons button");
 jumpButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const time = parseFloat(btn.dataset.time);
@@ -79,8 +78,6 @@ jumpButtons.forEach((btn) => {
     video.play();
   });
 });
-
-const stepButtons = document.querySelectorAll(".step-btn");
 
 stepButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
